@@ -16,7 +16,7 @@
         "whatsapp-send-file": "nodes/whatsapp-send-file/whatsapp-send-file.js",
         "whatsapp-send-image": "nodes/whatsapp-send-image/whatsapp-send-image.js",
         "whatsapp-send-text": "nodes/whatsapp-send-text/whatsapp-send-text.js",
-        "whatsapp-send-video": "nodes/nodes/whatsapp-send-video/whatsapp-send-video.js"
+        "whatsapp-send-video": "nodes/whatsapp-send-video/whatsapp-send-video.js"
       }
     },
     "keywords": [
