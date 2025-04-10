@@ -1,6 +1,6 @@
-# node-red-contrib-vonage-whatsapp
+# node-red-contrib-whatsapp
 
-Este projeto fornece um conjunto de nodes para o Node-RED que permite o envio de mensagens via WhatsApp utilizando a API da Vonage. Com estes nodes, é possível enviar diversos tipos de mensagens, como textos, imagens, vídeos, áudios, arquivos e mensagens interativas (botões com link ou respostas rápidas).
+Este projeto fornece um conjunto de nodes para o Node-RED que permite o envio de mensagens via WhatsApp utilizando a API Oficial. Com estes nodes, é possível enviar diversos tipos de mensagens, como textos, imagens, vídeos, áudios, arquivos e mensagens interativas (botões com link ou respostas rápidas).
 
 ## Funcionalidades
 
@@ -25,7 +25,7 @@ Para instalar este módulo no seu ambiente Node-RED, siga os passos abaixo:
 
 2. Instale o pacote via npm:
 
-   npm install node-red-contrib-vonage-whatsapp
+   npm install node-red-contrib-broker
 
 3. Reinicie o Node-RED para que os novos nodes sejam carregados.
 
@@ -41,7 +41,7 @@ Para instalar este módulo no seu ambiente Node-RED, siga os passos abaixo:
 
    msg.payload = {
        to: "5541999999999",
-       text: "Olá, esta é uma mensagem enviada via Vonage!"
+       text: "Olá, esta é uma mensagem enviada via Code Flow!"
    };
    return msg;
 
@@ -60,8 +60,7 @@ Cada node possui um arquivo contendo a sua interface e uma ajuda inline para fac
 - whatsapp-send-text: Configurações básicas para envio de mensagem de texto.
 - whatsapp-send-video: Parâmetros para a URL do vídeo e legenda.
 
-Para maiores detalhes sobre a formatação dos payloads e parâmetros, consulte a documentação oficial da Vonage em:
-https://developer.vonage.com/en/messages/code-snippets
+
 
 ## Contribuições
 
