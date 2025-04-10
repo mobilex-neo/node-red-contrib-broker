@@ -1,0 +1,40 @@
+<script type="text/x-red" data-template-name="whatsapp-send-text">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Nome</label>
+        <input type="text" id="node-input-name" placeholder="Nome do node">
+    </div>
+    <div class="form-row">
+        <label for="node-input-from">Remetente</label>
+        <input type="text" id="node-input-from" placeholder="Número/ID do remetente">
+    </div>
+    <div class="form-row">
+        <label for="node-input-apiKey">API Key</label>
+        <input type="text" id="node-input-apiKey" placeholder="API Key da Vonage">
+    </div>
+    <div class="form-row">
+        <label for="node-input-token">Token</label>
+        <input type="text" id="node-input-token" placeholder="Token de autenticação">
+    </div>
+    <div class="form-row">
+        <label for="node-input-to">Destinatário (To)</label>
+        <input type="text" id="node-input-to" placeholder="Número de destino">
+    </div>
+    <div class="form-row">
+        <label for="node-input-text">Texto da Mensagem</label>
+        <input type="text" id="node-input-text" placeholder="Conteúdo da mensagem">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="whatsapp-send-text">
+    <p>
+        Este node envia uma mensagem de texto via WhatsApp utilizando a API da Vonage.
+        Ele realiza uma requisição HTTP para o endpoint configurado com os parâmetros fornecidos.
+    </p>
+    <p>
+        <b>Configurações:</b>
+        <ul>
+            <li><b>Texto da Mensagem:</b> Conteúdo textual a ser enviado.</li>
+            <li><b>Destinatário:</b> Número para o qual a mensagem será enviada.</li>
+        </ul>
+    </p>
+</script>

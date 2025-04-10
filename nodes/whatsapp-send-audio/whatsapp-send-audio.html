@@ -1,0 +1,44 @@
+<script type="text/x-red" data-template-name="whatsapp-send-audio">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Nome</label>
+        <input type="text" id="node-input-name" placeholder="Nome do node">
+    </div>
+    <div class="form-row">
+        <label for="node-input-from">Remetente</label>
+        <input type="text" id="node-input-from" placeholder="Número/ID do remetente">
+    </div>
+    <div class="form-row">
+        <label for="node-input-apiKey">API Key</label>
+        <input type="text" id="node-input-apiKey" placeholder="API Key da Vonage">
+    </div>
+    <div class="form-row">
+        <label for="node-input-token">Token</label>
+        <input type="text" id="node-input-token" placeholder="Token de autenticação">
+    </div>
+    <div class="form-row">
+        <label for="node-input-to">Destinatário (To)</label>
+        <input type="text" id="node-input-to" placeholder="Número de destino">
+    </div>
+    <div class="form-row">
+        <label for="node-input-audioUrl">URL do Áudio</label>
+        <input type="text" id="node-input-audioUrl" placeholder="Link para o arquivo de áudio">
+    </div>
+    <div class="form-row">
+        <label for="node-input-caption">Legenda (opcional)</label>
+        <input type="text" id="node-input-caption" placeholder="Legenda para o áudio">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="whatsapp-send-audio">
+    <p>
+        Este node envia uma mensagem de áudio via WhatsApp através da API da Vonage.
+        Informe a URL do arquivo de áudio e, se desejar, uma legenda.
+    </p>
+    <p>
+        <b>Configurações:</b>
+        <ul>
+            <li><b>Audio URL:</b> Endereço do arquivo de áudio.</li>
+            <li><b>Legenda:</b> Texto opcional descrevendo o áudio.</li>
+        </ul>
+    </p>
+</script>

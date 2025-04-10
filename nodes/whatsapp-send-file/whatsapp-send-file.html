@@ -1,0 +1,44 @@
+<script type="text/x-red" data-template-name="whatsapp-send-file">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Nome</label>
+        <input type="text" id="node-input-name" placeholder="Nome do node">
+    </div>
+    <div class="form-row">
+        <label for="node-input-from">Remetente</label>
+        <input type="text" id="node-input-from" placeholder="Número/ID do remetente">
+    </div>
+    <div class="form-row">
+        <label for="node-input-apiKey">API Key</label>
+        <input type="text" id="node-input-apiKey" placeholder="API Key da Vonage">
+    </div>
+    <div class="form-row">
+        <label for="node-input-token">Token</label>
+        <input type="text" id="node-input-token" placeholder="Token de autenticação">
+    </div>
+    <div class="form-row">
+        <label for="node-input-to">Destinatário (To)</label>
+        <input type="text" id="node-input-to" placeholder="Número de destino">
+    </div>
+    <div class="form-row">
+        <label for="node-input-fileUrl">URL do Arquivo</label>
+        <input type="text" id="node-input-fileUrl" placeholder="Link para o arquivo">
+    </div>
+    <div class="form-row">
+        <label for="node-input-caption">Legenda (opcional)</label>
+        <input type="text" id="node-input-caption" placeholder="Legenda para o arquivo">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="whatsapp-send-file">
+    <p>
+        Este node envia uma mensagem contendo um arquivo via WhatsApp através da API da Vonage.
+        Informe a URL do arquivo e, se desejar, uma legenda.
+    </p>
+    <p>
+        <b>Configurações:</b>
+        <ul>
+            <li><b>URL do Arquivo:</b> Endereço onde o arquivo está hospedado.</li>
+            <li><b>Legenda:</b> Texto opcional para acompanhar o arquivo.</li>
+        </ul>
+    </p>
+</script>

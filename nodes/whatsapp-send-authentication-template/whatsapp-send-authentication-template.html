@@ -1,0 +1,51 @@
+<script type="text/x-red" data-template-name="whatsapp-send-authentication-template">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Nome</label>
+        <input type="text" id="node-input-name" placeholder="Nome do node">
+    </div>
+    <div class="form-row">
+        <label for="node-input-from">Remetente</label>
+        <input type="text" id="node-input-from" placeholder="Número/ID do remetente">
+    </div>
+    <div class="form-row">
+        <label for="node-input-apiKey">API Key</label>
+        <input type="text" id="node-input-apiKey" placeholder="API Key da Vonage">
+    </div>
+    <div class="form-row">
+        <label for="node-input-token">Token</label>
+        <input type="text" id="node-input-token" placeholder="Token de autenticação">
+    </div>
+    <div class="form-row">
+        <label for="node-input-to">Destinatário (To)</label>
+        <input type="text" id="node-input-to" placeholder="Número de destino">
+    </div>
+    <div class="form-row">
+        <label for="node-input-templateName">Nome do Template</label>
+        <input type="text" id="node-input-templateName" placeholder="Nome do template de autenticação">
+    </div>
+    <div class="form-row">
+        <label for="node-input-language">Idioma do Template</label>
+        <input type="text" id="node-input-language" placeholder="ex: pt_BR">
+    </div>
+    <div class="form-row">
+        <label for="node-input-components">Componentes (JSON)</label>
+        <textarea id="node-input-components" style="height:100px;" placeholder='Ex: [{"type":"body","parameters":[{"type":"text","text":"123456"}]}]'></textarea>
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="whatsapp-send-authentication-template">
+    <p>
+        Este node envia um template de autenticação via WhatsApp utilizando a API da Vonage.
+        Ele requer um nome de template, idioma e componentes em formato JSON para customizar a mensagem.
+    </p>
+    <p>
+        <b>Configurações:</b>
+        <ul>
+            <li><b>Remetente:</b> Número ou ID configurado no painel da Vonage.</li>
+            <li><b>API Key e Token:</b> Credenciais para autenticação na API.</li>
+            <li><b>Template Name:</b> Nome do template de autenticação registrado na Vonage.</li>
+            <li><b>Language:</b> Código do idioma (ex: pt_BR).</li>
+            <li><b>Components:</b> Array em JSON com os parâmetros do template.</li>
+        </ul>
+    </p>
+</script>

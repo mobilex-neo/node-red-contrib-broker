@@ -1,0 +1,45 @@
+<script type="text/x-red" data-template-name="whatsapp-send-media-mtm">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Nome</label>
+        <input type="text" id="node-input-name" placeholder="Nome do node">
+    </div>
+    <div class="form-row">
+        <label for="node-input-from">Remetente</label>
+        <input type="text" id="node-input-from" placeholder="Número/ID do remetente">
+    </div>
+    <div class="form-row">
+        <label for="node-input-apiKey">API Key</label>
+        <input type="text" id="node-input-apiKey" placeholder="API Key da Vonage">
+    </div>
+    <div class="form-row">
+        <label for="node-input-token">Token</label>
+        <input type="text" id="node-input-token" placeholder="Token de autenticação">
+    </div>
+    <div class="form-row">
+        <label for="node-input-to">Destinatário (To)</label>
+        <input type="text" id="node-input-to" placeholder="Número de destino">
+    </div>
+    <div class="form-row">
+        <label for="node-input-mediaUrl">URL da Mídia</label>
+        <input type="text" id="node-input-mediaUrl" placeholder="Link para a mídia">
+    </div>
+    <div class="form-row">
+        <label for="node-input-caption">Legenda (opcional)</label>
+        <input type="text" id="node-input-caption" placeholder="Legenda para a mídia">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="whatsapp-send-media-mtm">
+    <p>
+        Este node envia uma mensagem contendo mídia (MTM) via WhatsApp utilizando a API da Vonage.
+        Você pode especificar a URL da mídia e uma legenda opcional.
+    </p>
+    <p>
+        <b>Configurações:</b>
+        <ul>
+            <li><b>Remetente:</b> Número ou ID configurado na Vonage.</li>
+            <li><b>Media URL:</b> Endereço da mídia (imagem, vídeo, etc.).</li>
+            <li><b>Legenda:</b> Texto que complementa a mídia.</li>
+        </ul>
+    </p>
+</script>

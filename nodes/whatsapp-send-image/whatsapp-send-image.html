@@ -1,0 +1,44 @@
+<script type="text/x-red" data-template-name="whatsapp-send-image">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Nome</label>
+        <input type="text" id="node-input-name" placeholder="Nome do node">
+    </div>
+    <div class="form-row">
+        <label for="node-input-from">Remetente</label>
+        <input type="text" id="node-input-from" placeholder="Número/ID do remetente">
+    </div>
+    <div class="form-row">
+        <label for="node-input-apiKey">API Key</label>
+        <input type="text" id="node-input-apiKey" placeholder="API Key da Vonage">
+    </div>
+    <div class="form-row">
+        <label for="node-input-token">Token</label>
+        <input type="text" id="node-input-token" placeholder="Token de autenticação">
+    </div>
+    <div class="form-row">
+        <label for="node-input-to">Destinatário (To)</label>
+        <input type="text" id="node-input-to" placeholder="Número de destino">
+    </div>
+    <div class="form-row">
+        <label for="node-input-imageUrl">URL da Imagem</label>
+        <input type="text" id="node-input-imageUrl" placeholder="Link para a imagem">
+    </div>
+    <div class="form-row">
+        <label for="node-input-caption">Legenda</label>
+        <input type="text" id="node-input-caption" placeholder="Legenda para a imagem">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="whatsapp-send-image">
+    <p>
+        Este node envia uma imagem via WhatsApp utilizando a API da Vonage.
+        Especifique a URL da imagem e uma legenda descritiva.
+    </p>
+    <p>
+        <b>Configurações:</b>
+        <ul>
+            <li><b>Image URL:</b> Link para a imagem que será enviada.</li>
+            <li><b>Legenda:</b> Texto descritivo da imagem.</li>
+        </ul>
+    </p>
+</script>

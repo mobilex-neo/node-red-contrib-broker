@@ -1,0 +1,44 @@
+<script type="text/x-red" data-template-name="whatsapp-send-video">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Nome</label>
+        <input type="text" id="node-input-name" placeholder="Nome do node">
+    </div>
+    <div class="form-row">
+        <label for="node-input-from">Remetente</label>
+        <input type="text" id="node-input-from" placeholder="Número/ID do remetente">
+    </div>
+    <div class="form-row">
+        <label for="node-input-apiKey">API Key</label>
+        <input type="text" id="node-input-apiKey" placeholder="API Key da Vonage">
+    </div>
+    <div class="form-row">
+        <label for="node-input-token">Token</label>
+        <input type="text" id="node-input-token" placeholder="Token de autenticação">
+    </div>
+    <div class="form-row">
+        <label for="node-input-to">Destinatário (To)</label>
+        <input type="text" id="node-input-to" placeholder="Número de destino">
+    </div>
+    <div class="form-row">
+        <label for="node-input-videoUrl">URL do Vídeo</label>
+        <input type="text" id="node-input-videoUrl" placeholder="Link para o vídeo">
+    </div>
+    <div class="form-row">
+        <label for="node-input-caption">Legenda (opcional)</label>
+        <input type="text" id="node-input-caption" placeholder="Legenda para o vídeo">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="whatsapp-send-video">
+    <p>
+        Este node envia um vídeo via WhatsApp utilizando a API da Vonage.
+        Informe a URL do vídeo e, se desejar, uma legenda descritiva.
+    </p>
+    <p>
+        <b>Configurações:</b>
+        <ul>
+            <li><b>Video URL:</b> Endereço do vídeo a ser enviado.</li>
+            <li><b>Legenda:</b> Texto opcional para acompanhar o vídeo.</li>
+        </ul>
+    </p>
+</script>

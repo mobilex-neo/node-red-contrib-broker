@@ -1,0 +1,44 @@
+<script type="text/x-red" data-template-name="whatsapp-send-button-quick-reply">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Nome</label>
+        <input type="text" id="node-input-name" placeholder="Nome do node">
+    </div>
+    <div class="form-row">
+        <label for="node-input-from">Remetente</label>
+        <input type="text" id="node-input-from" placeholder="Número/ID do remetente">
+    </div>
+    <div class="form-row">
+        <label for="node-input-apiKey">API Key</label>
+        <input type="text" id="node-input-apiKey" placeholder="API Key da Vonage">
+    </div>
+    <div class="form-row">
+        <label for="node-input-token">Token</label>
+        <input type="text" id="node-input-token" placeholder="Token de autenticação">
+    </div>
+    <div class="form-row">
+        <label for="node-input-to">Destinatário (To)</label>
+        <input type="text" id="node-input-to" placeholder="Número de destino">
+    </div>
+    <div class="form-row">
+        <label for="node-input-text">Texto da Mensagem</label>
+        <input type="text" id="node-input-text" placeholder="Conteúdo da mensagem">
+    </div>
+    <div class="form-row">
+        <label for="node-input-buttons">Botões (JSON)</label>
+        <textarea id="node-input-buttons" style="height:100px;" placeholder='Ex: [{"title": "Opção 1", "payload": "1"}, {"title": "Opção 2", "payload": "2"}]'></textarea>
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="whatsapp-send-button-quick-reply">
+    <p>
+        Este node envia uma mensagem com botões de resposta rápida via WhatsApp utilizando a API da Vonage.
+        Permite definir o texto da mensagem e os botões (em formato JSON) para respostas interativas.
+    </p>
+    <p>
+        <b>Configurações:</b>
+        <ul>
+            <li><b>Texto da Mensagem:</b> Conteúdo da mensagem.</li>
+            <li><b>Botões:</b> Array em JSON definindo os botões de resposta.</li>
+        </ul>
+    </p>
+</script>

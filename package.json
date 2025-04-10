@@ -1,0 +1,30 @@
+{
+    "name": "node-red-contrib-broker",
+    "version": "1.0.0",
+    "description": "Nodes do Node-RED para envio de mensagens via WhatsApp usando o Borker da MTM Tecnologia",
+    "dependencies": {
+      "node-fetch": "^2.6.1"
+    },
+    "node-red": {
+      "nodes": {
+        "whatsapp-send-authentication-template": "nodes/whatsapp-send-authentication-template/whatsapp-send-authentication-template.js",
+        "whatsapp-send-media-mtm": "nodes/whatsapp-send-media-mtm/whatsapp-send-media-mtm.js",
+        "whatsapp-mark-as-read": "nodes/whatsapp-mark-as-read/whatsapp-mark-as-read.js",
+        "whatsapp-send-audio": "nodes/whatsapp-send-audio/whatsapp-send-audio.js",
+        "whatsapp-send-button-link": "nodes/whatsapp-send-button-link/whatsapp-send-button-link.js",
+        "whatsapp-send-button-quick-reply": "nodes/whatsapp-send-button-quick-reply/whatsapp-send-button-quick-reply.js",
+        "whatsapp-send-file": "nodes/whatsapp-send-file/whatsapp-send-file.js",
+        "whatsapp-send-image": "nodes/whatsapp-send-image/whatsapp-send-image.js",
+        "whatsapp-send-text": "nodes/whatsapp-send-text/whatsapp-send-text.js",
+        "whatsapp-send-video": "nodes/nodes/whatsapp-send-video/whatsapp-send-video.js"
+      }
+    },
+    "keywords": [
+      "node-red",
+      "broker",
+      "whatsapp",
+      "messaging"
+    ],
+    "license": "MIT",
+    "author": "Luiz Carvalho <dev@mtmtecnologia.com.br>"
+  }
