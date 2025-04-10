@@ -1,3 +1,25 @@
+<script type="text/javascript">
+    RED.nodes.registerType("whatsapp-send-button-quick-reply", {
+        category: "mobileX Broker",
+        color: "#a6bbcf",
+        defaults: {
+            name: { value: "" },
+            from: { value: "" },
+            apiKey: { value: "" },
+            token: { value: "" },
+            to: { value: "" },
+            text: { value: "" },
+            buttons: { value: "" }
+        },
+        inputs: 1,
+        outputs: 1,
+        icon: "font-awesome/fa-hand-pointer-o",
+        label: function () {
+            return this.name || "Send Button Quick Reply";
+        }
+    });
+</script>
+
 <script type="text/x-red" data-template-name="whatsapp-send-button-quick-reply">
     <div class="form-row">
         <label for="node-input-name"><i class="fa fa-tag"></i> Nome</label>

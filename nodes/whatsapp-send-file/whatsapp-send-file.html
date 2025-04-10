@@ -1,3 +1,25 @@
+<script type="text/javascript">
+    RED.nodes.registerType("whatsapp-send-file", {
+        category: "mobileX Broker",
+        color: "#a6bbcf",
+        defaults: {
+            name: { value: "" },
+            from: { value: "" },
+            apiKey: { value: "" },
+            token: { value: "" },
+            to: { value: "" },
+            fileUrl: { value: "" },
+            caption: { value: "" }
+        },
+        inputs: 1,
+        outputs: 1,
+        icon: "font-awesome/fa-file",
+        label: function () {
+            return this.name || "Send File";
+        }
+    });
+</script>
+
 <script type="text/x-red" data-template-name="whatsapp-send-file">
     <div class="form-row">
         <label for="node-input-name"><i class="fa fa-tag"></i> Nome</label>

@@ -1,3 +1,26 @@
+<script type="text/javascript">
+    RED.nodes.registerType("whatsapp-send-authentication-template", {
+        category: "mobileX Broker",
+        color: "#a6bbcf",
+        defaults: {
+            name: { value: "" },
+            from: { value: "" },
+            apiKey: { value: "" },
+            token: { value: "" },
+            to: { value: "" },
+            templateName: { value: "" },
+            language: { value: "" },
+            components: { value: "" }
+        },
+        inputs: 1,
+        outputs: 1,
+        icon: "font-awesome/fa-comments",
+        label: function () {
+            return this.name || "Send Auth Template";
+        }
+    });
+</script>
+
 <script type="text/x-red" data-template-name="whatsapp-send-authentication-template">
     <div class="form-row">
         <label for="node-input-name"><i class="fa fa-tag"></i> Nome</label>

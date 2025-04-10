@@ -1,3 +1,24 @@
+<script type="text/javascript">
+    RED.nodes.registerType("whatsapp-send-text", {
+        category: "mobileX Broker",
+        color: "#a6bbcf",
+        defaults: {
+            name: { value: "" },
+            from: { value: "" },
+            apiKey: { value: "" },
+            token: { value: "" },
+            to: { value: "" },
+            text: { value: "" }
+        },
+        inputs: 1,
+        outputs: 1,
+        icon: "font-awesome/fa-font",
+        label: function () {
+            return this.name || "Send Text";
+        }
+    });
+</script>
+
 <script type="text/x-red" data-template-name="whatsapp-send-text">
     <div class="form-row">
         <label for="node-input-name"><i class="fa fa-tag"></i> Nome</label>

@@ -1,3 +1,26 @@
+<script type="text/javascript">
+    RED.nodes.registerType("whatsapp-send-button-link", {
+        category: "mobileX Broker",
+        color: "#a6bbcf",
+        defaults: {
+            name: { value: "" },
+            from: { value: "" },
+            apiKey: { value: "" },
+            token: { value: "" },
+            to: { value: "" },
+            text: { value: "" },
+            buttonTitle: { value: "" },
+            url: { value: "" }
+        },
+        inputs: 1,
+        outputs: 1,
+        icon: "font-awesome/fa-link",
+        label: function () {
+            return this.name || "Send Button Link";
+        }
+    });
+</script>
+
 <script type="text/x-red" data-template-name="whatsapp-send-button-link">
     <div class="form-row">
         <label for="node-input-name"><i class="fa fa-tag"></i> Nome</label>
