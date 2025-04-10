@@ -75,3 +75,4 @@ Este projeto está licenciado sob a Licença MIT – veja o arquivo LICENSE para
 ## Contato
 
 Caso haja dúvidas ou necessidade de suporte, entre em contato por meio dos canais disponibilizados no repositório.
+
