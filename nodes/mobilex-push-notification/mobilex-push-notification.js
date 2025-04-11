@@ -44,7 +44,7 @@ module.exports = function(RED) {
                             addressCity: [],
                             addressCountry: [],
                             addressState: {},
-                            userids: msg.userids || []  // ou defina um padrão
+                            userids: JSON.parse(msg.userids) || []  // ou defina um padrão
                         },
                         actions: [],
                         actionPush: (node.actionPush) ? JSON.parse(node.actionPush) : [],
@@ -66,7 +66,6 @@ module.exports = function(RED) {
                     // Configurar os headers para a requisição push
                     const headersPush = {
                         'Accept': 'application/json, text/plain, */*',
-                        'Accept-Language': 'pt-BR,pt;q=0.9,es-419;q=0.8,es;q=0.7,en-US;q=0.6,en;q=0.5',
                         'AppCompanyId': node.appCompanyId,
                         'Authorization': 'Bearer ' + token,
                         'Connection': 'keep-alive',
