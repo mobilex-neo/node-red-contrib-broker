@@ -31,9 +31,15 @@ module.exports = function(RED) {
                 }
             })
             .then(authResponse => {
+                let data = authResponse.data;
+
+                if (typeof data === 'string') {
+                    data = JSON.parse(data);
+                }
+
                 node.log("Autenticação realizada com sucesso.");
-                if (authResponse.data && authResponse.data.access_token) {
-                    const token = authResponse.data.access_token;
+                if (data && data.access_token) {
+                    const token = data.access_token;
 
                     // Construir o payload para o push. Você pode estender para usar dados de msg.payload, msg.userids, etc.
                     const pushPayload = {
@@ -78,7 +84,13 @@ module.exports = function(RED) {
                         headers: headersPush
                     })
                     .then(pushResponse => {
-                        msg.payload = pushResponse.data;
+                        let data = pushResponse.data;
+                        if (typeof data === 'string') {
+                            data = JSON.parse(data);
+                        }
+                        node.log("Mensagem push enviada com sucesso.");
+                        // Enviar a resposta para o próximo nó
+                        msg.payload = data;
                         node.send(msg);
                     })
                     .catch(errPush => {

@@ -1,6 +1,6 @@
 {
     "name": "node-red-contrib-broker",
-    "version": "1.0.13",
+    "version": "1.0.14",
     "description": "Nodes do Node-RED para envio de mensagens via WhatsApp usando o Broker da MTM Tecnologia",
     "dependencies": {
       "node-fetch": "^2.6.1"
