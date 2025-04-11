@@ -23,7 +23,7 @@ module.exports = function(RED) {
             const params = new URLSearchParams();
             params.append('grant_type', 'client_credentials');
             params.append('client_secret', node.clientSecret);
-            node.info("Iniciando autenticação com client_secret: " + node.clientSecret);
+            node.log("Iniciando autenticação com client_secret: " + node.clientSecret);
             // Chamada para autenticar e obter o token
             axios.post(node.apiAuthUrl, params, {
                 headers: {
@@ -72,7 +72,7 @@ module.exports = function(RED) {
                         'Connection': 'keep-alive',
                         'Content-Type': 'application/json;charset=UTF-8',
                     };
-                    node.info("Preparando envio da mensagem push com payload: " + JSON.stringify(pushPayload));
+                    node.log("Preparando envio da mensagem push com payload: " + JSON.stringify(pushPayload));
                     // Enviar a mensagem push
                     axios.post(node.apiPushUrl, pushPayload, {
                         headers: headersPush
