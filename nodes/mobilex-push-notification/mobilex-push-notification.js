@@ -27,7 +27,7 @@ module.exports = function(RED) {
             // Chamada para autenticar e obter o token
             axios.post(node.apiAuthUrl, params, {
                 headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded'
+                    'Content-Type': 'application/json'
                 }
             })
             .then(authResponse => {
