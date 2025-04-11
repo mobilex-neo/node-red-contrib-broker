@@ -31,7 +31,7 @@ module.exports = function(RED) {
                 }
             })
             .then(authResponse => {
-                node.info("Autenticação realizada com sucesso.");
+                node.log("Autenticação realizada com sucesso.");
                 if (authResponse.data && authResponse.data.access_token) {
                     const token = authResponse.data.access_token;
 
