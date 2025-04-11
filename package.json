@@ -1,6 +1,6 @@
 {
     "name": "node-red-contrib-broker",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "description": "Nodes do Node-RED para envio de mensagens via WhatsApp usando o Broker da MTM Tecnologia",
     "dependencies": {
       "node-fetch": "^2.6.1"
@@ -16,7 +16,8 @@
         "whatsapp-send-file": "nodes/whatsapp-send-file/whatsapp-send-file.js",
         "whatsapp-send-image": "nodes/whatsapp-send-image/whatsapp-send-image.js",
         "whatsapp-send-text": "nodes/whatsapp-send-text/whatsapp-send-text.js",
-        "whatsapp-send-video": "nodes/whatsapp-send-video/whatsapp-send-video.js"
+        "whatsapp-send-video": "nodes/whatsapp-send-video/whatsapp-send-video.js",
+        "mobilex-push-notification": "nodes/mobilex-push-notification/mobilex-push-notification/mobilex-push-notification.js"
       }
     },
     "keywords": [

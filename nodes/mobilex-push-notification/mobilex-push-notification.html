@@ -1,0 +1,81 @@
+<script type="text/javascript">
+    RED.nodes.registerType('mobilex-push-notification', {
+        category: 'mobileX Broker',
+        color: "#a6bbcf",
+        defaults: {
+            name: {value:""},
+            clientSecret: {value:"", required: true, validate: RED.validators.regex(/^.+$/)},
+            appCompanyId: {value:"", required: true, validate: RED.validators.regex(/^.+$/)},
+            author: {value:"", required: true, validate: RED.validators.regex(/^.+$/)},
+            subjectPush: {value:"", required: true, validate: RED.validators.regex(/^.+$/)},
+            contentPush: {value:"", required: true, validate: RED.validators.regex(/^.+$/)},
+            actionPush: {value:"", required: false},
+            apiAuthUrl: {value:"https://api.mobilex.tech/api/external/auth"},
+            apiPushUrl: {value:"https://api.mobilex.tech/api/manager/messenger/message"}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "font-awesome/fa-bell",
+        label: function() {
+            return this.name || "mobilex-push-notification";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="mobilex-push-notification">
+    <label for="node-input-name"><i class="fa fa-tag"></i> Nome</label>
+    <input type="text" id="node-input-name" placeholder="Nome do nó">
+</div>
+
+<div class="form-row">
+    <label for="node-input-clientSecret"><i class="fa fa-lock"></i> Client Secret</label>
+    <input type="text" id="node-input-clientSecret" placeholder="Client Secret">
+</div>
+
+<div class="form-row">
+    <label for="node-input-appCompanyId"><i class="fa fa-building"></i> App Company ID</label>
+    <input type="text" id="node-input-appCompanyId" placeholder="App Company ID">
+</div>
+
+<div class="form-row">
+    <label for="node-input-author"><i class="fa fa-user"></i> Author ID</label>
+    <input type="text" id="node-input-author" placeholder="Author ID">
+</div>
+
+<div class="form-row">
+    <label for="node-input-subjectPush"><i class="fa fa-pencil"></i> Subject Push</label>
+    <input type="text" id="node-input-subjectPush" placeholder="Assunto da mensagem push">
+</div>
+
+<div class="form-row">
+    <label for="node-input-contentPush"><i class="fa fa-align-left"></i> Content Push</label>
+    <input type="text" id="node-input-contentPush" placeholder="Conteúdo da mensagem push">
+</div>
+
+<div class="form-row">
+    <label for="node-input-actionPush"><i class="fa fa-cogs"></i> Action Push (JSON)</label>
+    <input type="text" id="node-input-actionPush" placeholder="Ex.: [{ \"action\": \"value\" }]">
+</div>
+</script>
+<script type="text/x-red" data-help-name="mobilex-push-notification">
+    <p>
+        Este nó envia uma mensagem push via API MobileX. Ele realiza uma requisição HTTP para o endpoint de autenticação utilizando as credenciais do client e, em seguida, envia a mensagem push configurada com os parâmetros fornecidos.
+    </p>
+    <p>
+        <b>Configurações:</b>
+        <ul>
+            <li><b>Client Secret:</b> Chave secreta utilizada na autenticação.</li>
+            <li><b>App Company ID:</b> Identificador da empresa para o cabeçalho da requisição push.</li>
+            <li><b>Author ID:</b> Identificação do autor da mensagem push.</li>
+            <li><b>Subject Push:</b> Título ou assunto da mensagem push.</li>
+            <li><b>Content Push:</b> Conteúdo da mensagem push.</li>
+            <li><b>Action Push (JSON):</b> Objeto em formato JSON contendo informações de ação adicionais.</li>
+            <li><b>API Auth URL:</b> URL de autenticação (padrão: <code>https://api.mobilex.tech/api/external/auth</code>).</li>
+            <li><b>API Push URL:</b> URL para envio da mensagem push (padrão: <code>https://api.mobilex.tech/api/manager/messenger/message</code>).</li>
+        </ul>
+    </p>
+    <p>
+        Ao receber uma mensagem, o nó realiza a autenticação para obter o token de acesso, configura os cabeçalhos necessários e envia a mensagem push para os usuários especificados.
+    </p>
+</script>
+
