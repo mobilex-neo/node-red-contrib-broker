@@ -88,7 +88,7 @@ module.exports = function(RED) {
                 }
             })
             .catch(errAuth => {
-                node.error("Erro na autenticação: " + errAuth.message, msg);
+                node.error("Erro na autenticação: " + JSON.stringify(errAuth), msg);
             });
         });
     }
