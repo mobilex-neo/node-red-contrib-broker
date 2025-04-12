@@ -48,7 +48,7 @@ module.exports = function(RED) {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
-                    'Authorization': 'Bearer ' + node.token
+                    'Authorization': 'Basic ' + Buffer.from(node.apiKey + ':' + node.token).toString('base64')
                 },
                 body: JSON.stringify(payload)
             };
